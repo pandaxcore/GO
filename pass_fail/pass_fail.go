@@ -19,16 +19,19 @@ func main() {
 	}
 
 	input = strings.TrimSpace(input)
+	var grade float64
 	grade, err = strconv.ParseFloat(input, 64)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	var status string
 	if grade >= 60 {
-		status := "passing"
+		status = "passing"
 	} else {
-		status := "failing"
+		status = "failing"
 	}
-	fmt.Println(input)
+	fmt.Println("A grade of", grade, "is", status)
+
 }
