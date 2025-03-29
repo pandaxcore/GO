@@ -6,7 +6,7 @@ import (
 
 func main() {
 	if false {
-		fmt.Println("flase")
+		fmt.Println()
 	}
 	// for x := 0; x < 3; x++ {
 	// 	fmt.Println("continue", x)
