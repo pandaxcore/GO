@@ -13,11 +13,10 @@ import (
 func main() {
 	target := rand.Intn(11)
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println(target)
+	// fmt.Println(target)
 	for guesses := 0; guesses < 10; guesses++ {
 		fmt.Println("You got", 10-guesses, "left.")
 		fmt.Print("Make a guess: ")
-
 		input, err := reader.ReadString('\n')
 
 		if err != nil {
@@ -37,7 +36,7 @@ func main() {
 			fmt.Println("Your guess was HIGH")
 		} else {
 			fmt.Println("You GUESS is", guess)
-			return
+			break
 		}
 	}
 }
