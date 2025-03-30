@@ -7,6 +7,10 @@ func createPointer() *float64 {
 	return &myFloat
 }
 
+func double(number *int) {
+	*number *= 2
+}
+
 func main() {
 	var myInt int
 	var myIntPointer *int
@@ -16,4 +20,8 @@ func main() {
 
 	var myFloatPointer *float64 = createPointer()
 	fmt.Println(*myFloatPointer)
+
+	var amount int = 6
+	double(&amount)
+	fmt.Println(amount)
 }
